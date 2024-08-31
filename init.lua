@@ -5,4 +5,8 @@ function M.show_time()
 	print("Current Time: " .. current_time)
 end
 
+vim.api.nvim_create_user_command("TimyShowTime", function()
+	M.show_time()
+end, {})
+
 return M
